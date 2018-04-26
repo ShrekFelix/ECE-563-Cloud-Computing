@@ -10,7 +10,6 @@ def index(request):
     return render(request, 'index.html')
 
 def crawl(request):
-    ext = request.POST['ext']
     url = request.POST['url']
     page = requests.get(url).text
     soup = BeautifulSoup(page, 'html.parser')
@@ -18,10 +17,10 @@ def crawl(request):
     for node in soup.find_all('img'):
         src = node.get('src')
         if src:
-            if src.endswith(ext):
-                if src.startswith('/'):#relative path
-                    src = url+src
-                results.append(src)
+            src = node.get('src')
+            if src.startswith('/'):#relative path
+                src = url+src
+            results.append(src)
     context = {
         'results':results,
     }
