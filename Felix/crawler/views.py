@@ -10,8 +10,8 @@ def index(request):
     return render(request, 'index.html')
 
 def crawl(request):
-    ext = '.png'
-    url = request.POST['input']
+    ext = request.POST['ext']
+    url = request.POST['url']
     page = requests.get(url).text
     soup = BeautifulSoup(page, 'html.parser')
     results = []

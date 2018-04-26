@@ -4,7 +4,12 @@
 <body>
   <form action='result/' method="post">
     {% csrf_token %}
-    <input type='text' name='input'>
+    <label>site:</label>
+    <input type='text' name='url'>
+    <br/>
+    <label>extension</label>
+    <input type='text' name='ext'>
+    <br/>
     <input type='submit' value='Go'>
   </form>
 </body>
