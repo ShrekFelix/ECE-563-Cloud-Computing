@@ -24,7 +24,10 @@ def crawl(request):
         '''
         try:
             page = requests.get(url).text
-        except:
+        except requests.exceptions.SSLError as ssle:
+            print('-----------------------------------------------------------------')
+            print(ssle)
+            print('-----------------------------------------------------------------')
             return []
         pool = []
         soup = BeautifulSoup(page, 'html.parser')
