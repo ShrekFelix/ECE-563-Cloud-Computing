@@ -22,8 +22,11 @@ def crawl(request):
         '''
         capture new urls located at **attributes** of **labels** from **source urls**, 
         '''
+        try:
+            page = requests.get(url).text
+        except:
+            return []
         pool = []
-        page = requests.get(url).text
         soup = BeautifulSoup(page, 'html.parser')
         url_obj = urlparse(url)
         for node in soup.find_all(label):
