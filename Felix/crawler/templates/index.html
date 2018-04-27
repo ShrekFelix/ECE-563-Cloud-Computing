@@ -5,7 +5,10 @@
   <form action='result/' method="post">
     {% csrf_token %}
     <label>site:</label>
-    <input type='text' name='url'>
+    <input type='text' name='start'>
+    <br/>
+    <label>depth:</label>
+    <input type='text' name='depth'>
     <br/>
     <input type='submit' value='Go'>
   </form>
