@@ -25,7 +25,9 @@ SECRET_KEY = '=1d&y5xrly$41^$maqt@3#%7kqx)k)c116y$s5j-_@4ki2men)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost',
+                 'vcm-171.vm.duke.edu',
+]
 
 
 # Application definition
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
