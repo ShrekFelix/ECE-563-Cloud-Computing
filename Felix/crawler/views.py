@@ -24,9 +24,9 @@ def crawl(request):
         '''
         try:
             page = requests.get(url).text
-        except requests.exceptions.SSLError as ssle:
+        except Exception as e:
             print('-----------------------------------------------------------------')
-            print(ssle)
+            print(e)
             print('-----------------------------------------------------------------')
             return []
         pool = []
