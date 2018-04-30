@@ -1,14 +1,13 @@
-<head>
-  <title>crawler</title>
-</head>
-<body>
+
+<body style="text-align:center" text="white">
+<body background="http://img.lanrentuku.com/img/allimg/1305/5-13050GS109-50.gif">
+  <h1>crawler</h1>
+
   <form action='result/' method="post">
     {% csrf_token %}
-    <label>site:</label>
-    <input type='text' name='start'>
+    <input type='text' name='start' placeholder="starting point">
     <br/>
-    <label>depth:</label>
-    <input type='text' name='depth'>
+    <input type='text' name='depth' placeholder="depth to stop">
     <br/>
     <input type='submit' value='Go'>
   </form>
