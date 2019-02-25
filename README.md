@@ -1,1 +1,3 @@
-# ECE-563-Cloud-Computing
+collection of web apps
+
+developed with Django
