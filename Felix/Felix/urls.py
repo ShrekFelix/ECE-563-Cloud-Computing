@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('crawler/', include('crawler.urls')),
+    path('Actiondex/', include('Actiondex.urls')),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,14 @@
+<body style="text-align:center" text="white">
+    <h1>Actiondex</h1>
+    <h2>Trial</h2>
+    <form action='result/' method="post">
+    {% csrf_token %}
+    <input type='text' name='drug_name' placeholder="drug name">
+    <br/>
+    <input type='text' name='subject_occupation' placeholder="subject occupation">
+    <br/>
+    <input type='text' name='subject_disease' placeholder="subject disease">
+    <br/><br/>
+    <input type='submit' value='query'>
+    </form>
+</body>

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['localhost',
 # Application definition
 
 INSTALLED_APPS = [
+    'Actiondex.apps.ActiondexConfig',
     'crawler.apps.CrawlerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
