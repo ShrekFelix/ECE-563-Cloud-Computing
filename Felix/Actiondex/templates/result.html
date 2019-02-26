@@ -1,0 +1,15 @@
+<head>
+    <title>result</title>
+</head>
+<body style="text-align:center">
+    query result:<br/>
+    {% for r in result %}
+        {{r.drug}}, {{r.subject}}, {{r.result}}, {{r.lesson}}, {{r.time}}<br/>
+    {% endfor %}<br/>
+</body>
+filter by:<br/>
+<select name="filter" multiple>
+    <option value="filterBy_drugName">drug name</option>
+    <option value="filterBy_subjectOccupation">subject occupation</option>
+    <option value="filterBy_subjectDisease">subject disease</option>
+</select><br/>
