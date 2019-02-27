@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
 from .models import Trial, Drug, Subject
+from django.urls import reverse
 
 import datetime
 
@@ -15,12 +16,11 @@ def query(request):
 
     drug = Drug.objects.filter(name = drug_name).values('name')
     subject = Subject.objects.filter( Q(occupation = subject_occupation) | Q(disease = subject_disease) ).values('id')
-    result = Trial.objects.filter( Q(drug__in = drug) | Q(subject__in = subject) )
-    print(result)
+    trial = Trial.objects.filter( Q(drug__in = drug) | Q(subject__in = subject) )
     context = {
-        'result':result
+        'trial':trial
     }
-    return render(request, 'result.html', context)
+    return render(request, 'query_result.html', context)
 
 def insert(request):
     drug_name = request.POST['drug_name']
@@ -34,3 +34,4 @@ def insert(request):
     subject.save()
     trial = Trial(drug = drug, subject = subject, result = result, lesson = lesson, time = datetime.date.today())
     trial.save()
+    return HttpResponseRedirect('/Actiondex/')
