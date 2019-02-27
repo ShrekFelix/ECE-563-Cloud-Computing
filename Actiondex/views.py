@@ -9,6 +9,9 @@ import datetime
 def index(request):
     return render(request, 'index.html')
 
+def index_trial(request):
+    return render(request, 'trial.html')
+
 def query(request):
     drug_name = request.POST['drug_name']
     subject_occupation = request.POST['subject_occupation']

@@ -3,29 +3,9 @@
 
 <body style="text-align:center">
     <h1>Actiondex</h1>
-    <h2>Trial</h2>
-    <div>
-        query lessons
-        <form action='query/' method="post">
-            {% csrf_token %}
-            <input type='text' name='drug_name' placeholder="drug name"><br/>
-            <input type='text' name='subject_occupation' placeholder="subject occupation"><br/>
-            <input type='text' name='subject_disease' placeholder="subject disease"><br/>
-            <br/>
-            <input type='submit' value='query'>
-        </form><br/>
-    </div>
-    <div>
-        add lessons
-        <form action='insert/' method="post">
-            {% csrf_token %}
-            <input type='text' name='drug_name' placeholder="drug name"><br/>
-            <input type='text' name='subject_occupation' placeholder="subject occupation"><br/>
-            <input type='text' name='subject_disease' placeholder="subject disease"><br/>
-            <input type='text' name='result' placeholder="result"><br/>
-            <input type='text' name='lesson' placeholder="lesson"><br/>
-            <br/>
-            <input type='submit' value='insert'>
-        </form><br/>
-    </div>
+    <h2>A database system to reference past lessons</h2>
+    <a href="trial">trial</a><br/>
+    <a href="hiring">hiring</a><br/>
+    <a href="development">development</a><br/>
+    <a href="investment">investment</a><br/>
 </body>
